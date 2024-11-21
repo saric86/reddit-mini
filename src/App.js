@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Subreddits from './components/Subreddits/Subreddits';
+import Content from './components/Content/Content';
+import { useDispatch } from 'react-redux';
+import { fetchAllPosts } from './store/redditSlice';
+import { useEffect } from 'react';
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(fetchAllPosts()); // Load all posts for global search
+  }, [dispatch]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <div className='full-area'>
+        <aside>
+          <Subreddits/>
+        </aside>
+        <main>
+          <Content/>
+        </main> 
+      </div>
     </div>
   );
 }
