@@ -8,6 +8,7 @@ https://reddit-mini-one.vercel.app/
 - Search through all subreddits by typing a title into the search bar.
 - Utilize locally stored data.
 - Use the app, which is adapted for desktop, laptop, and mobile devices.
+- Built in React & Redux
 
 ## Getting Started with Create React App
 
