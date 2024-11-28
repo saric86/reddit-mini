@@ -1,32 +1,32 @@
 export const redditsData = [
     {
         id: "1",
-        image: "/images/topics.png",
+        image: "/images/boxing-glove.png",
         name: "Boxing"
     },
     {
         id: '2',
-        image: "/images/topics.png",
+        image: "/images/surfing.png",
         name: "Surfing"
     },
     {
         id: '3',
-        image: "images/topics.png",
+        image: "images/hand-shake.png",
         name: "Politics"
     },
     {
         id: '4',
-        image: "images/topics.png",
-        name: "Crazy grandparent"
+        image: "images/grandparents.png",
+        name: "Grandparents"
     },
     {
         id: '5',
-        image: "images/topics.png",
-        name: "Cats vs Dogs"
+        image: "images/pet-care.png",
+        name: "Cats & Dogs"
     },
     {
         id: '6',
-        image: "images/topics.png",
+        image: "images/laugh.png",
         name: "Memes"
     },
 ];

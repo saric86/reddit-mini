@@ -1,28 +1,44 @@
-/* .full-area {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.full-area aside {
-    width: 20%;
-}
-
-.full-area main {
-    width: 70%;
-} */
-
-
 .full-area {
+    box-sizing: border-box;
+    max-width: 100%;
     display: flex;
     justify-content: flex-start;
     gap: 7%; /* Adjust the gap size as needed */
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
 .full-area aside {
+    display: block;
     flex: 0 0 20%; /* Fixed width at 20% of the container */
 }
 
 .full-area main {
     flex: 0 0 calc(70% - 10px); /* Subtracting the gap size */
+}
+
+@media (max-width: 768px) {
+    .full-area {
+        gap: 5%;
+    }
+
+    .full-area aside {
+        flex: 0 0 24%; /* Fixed width at 20% of the container */
+    }
+
+    .full-area main {
+        flex: 0 0 calc(70% - 10px); /* Subtracting the gap size */
+    }
+}
+
+@media (max-width: 428px) {
+
+    .full-area aside {
+        display: none;
+    }
+
+    
+    .full-area main {
+        flex: 1;
+        margin: 0 15px 0 15px;
+    }
 }

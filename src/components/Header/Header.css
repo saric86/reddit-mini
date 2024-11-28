@@ -1,16 +1,21 @@
 header {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
     width: 100%;
+    max-width: 100%;
     height: 60px;
     background-color: white;
-    display: flex;           /* Make header a flex container */
-    justify-content:space-between; /* Spread out elements in the header */
-    padding: 10px;      /* Add some padding if needed */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     display: flex;
     align-items: center;
+    padding-left: 10px;
 }
 
 .logo img {
@@ -43,7 +48,7 @@ p span {
 }
 
 .search button {
-    margin-left: 5px;
+    margin-left: 3px;
     background-color: transparent;
     border: 0;
 }
@@ -52,4 +57,105 @@ p span {
     height: 26px;
     width: auto;
     opacity: 0.5;
+    margin-left: 0px;
+}
+
+/* Hamburger Menu Button */
+.menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.menu img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Menu Content (Subreddits Component) */
+.menu-content {
+    position: absolute;
+    top: 60px; /* Adjust according to header height */
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 20px;
+}
+
+
+/* Mobile-specific styling */
+
+
+@media (max-width: 769px) {
+    .search {
+        margin-left: 0;
+    }
+
+    .menu-content {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .search input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 428px) {
+    header {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo {
+        padding-left: 5px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: auto;
+    }
+
+    .logo p {
+        font-size: 0.75em;
+        margin-left: 5px;
+    }
+
+    .search {
+        margin-left: 10px;
+    }
+
+    .search input {
+        width: 170px;
+        margin-left: 0;
+    }
+
+    .search img {
+        height: 22px;
+    }
+
+    .menu button {
+        display: block;
+    }
+
+    .menu-content {
+        padding: 0;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    
+    .search input {
+        width: 130px;
+    }
 }
