@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchSubreddits, setSelectedSubreddit } from '../../store/subRedditSlice';
-import { fetchPosts } from '../../store/redditSlice';
+import { fetchSubreddits } from '../../store/subRedditSlice';
 import './Subreddits.css';
 
-function Subreddits() {
+function Subreddits({ onSelectSubreddit }) {
     const dispatch = useDispatch();
     const subreddits = useSelector((state) => state.subreddit.subreddits);
     const isLoading = useSelector((state) => state.subreddit.isLoading);
@@ -15,8 +14,7 @@ function Subreddits() {
     }, [dispatch]);
 
     const handleSubredditClick = (id) => {
-        dispatch(setSelectedSubreddit(id)); // Update selected subreddit
-        dispatch(fetchPosts(id)); // Fetch posts for the selected subreddit
+        onSelectSubreddit(id); // Notify App.js of selected subreddit
     };
 
     if (isLoading) {
@@ -45,19 +43,3 @@ function Subreddits() {
 }
 
 export default Subreddits;
-
-
-/*    return (
-        <div className="aside-left">
-            <h1>Subreddits</h1>
-            <ul>
-                {redditsData.map((reddit, index) => (
-                    <li key={index}>
-                        <img src={reddit.image}/>
-                        <h3>{reddit.name}</h3>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-*/

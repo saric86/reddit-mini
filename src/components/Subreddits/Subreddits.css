@@ -14,9 +14,16 @@
     font-size: 20px;
 }
 
+.aside-left button {
+    all: unset;
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+}
+
 .aside-left img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
 }
 
 .aside-left ul {
@@ -25,16 +32,35 @@
 
 .aside-left li {
     list-style-type: none;
-    display:flex;
-    align-items: center;
+    display: flex;          /* Enable flexbox on the list items */
+    align-items: center;    /* Vertically center the icon and text */
+    padding-bottom: 20px;
 }
 
 .aside-left h3 {
     font-size: 14px;
     font-weight: 500;
     padding-left: 10px;
+    line-height: 5px;
 }
 
 .aside-left li:last-child {
     padding-bottom: 50px;
+}
+
+.aside-left button:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.aside-left button:active {
+    background-color: rgb(171, 171, 171);
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .aside-left {
+        margin-left: 15px;
+    }
 }
