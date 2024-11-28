@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Try the project here:
+https://reddit-mini-one.vercel.app/
+
+## What You Can Do on the Web App:
+- Click on subreddits from the menu.
+- Vote up or down on posts.
+- View comments.
+- Search through all subreddits by typing a title into the search bar.
+- Utilize locally stored data.
+- Use the app, which is adapted for desktop, laptop, and mobile devices.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
